@@ -1,5 +1,11 @@
 {
-  "headline": "Three newer models catch unsafe images far better than Amazon Rekognition, for as little as 4¢ per thousand",
-  "lede": "We ran Cloudflare clef-flash, TypeSafe Jev, Claude Haiku 5.5 and Amazon Rekognition over all 10,146 images in UnsafeBench. The three newer models rank unsafe images about equally well, and each costs a fraction of Rekognition.",
-  "stamp": "'26 10 21"
+  "stamp": "'26 10 21",
+  "results": {
+    "headline": "How four models compare on image moderation, by accuracy, speed and cost",
+    "lede": "We ran Cloudflare clef-flash, TypeSafe Jev, Claude Haiku 5.5 and Amazon Rekognition over all 10,146 images in UnsafeBench with the same prompt and scoring, and report accuracy on the held-out test split."
+  },
+  "table": {
+    "headline": "Full results by model and by content category",
+    "lede": "Bold marks the best score in each ranked column. Differences of a few hundredths are within the bootstrap intervals, so read close scores as ties."
+  }
 }

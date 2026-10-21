@@ -24,6 +24,8 @@ All four models scored all 10,146 images with no unresolved errors (one Haiku re
 | Cloudflare clef-flash | 0.856 [0.839, 0.872] | 0.715 [0.690, 0.738] | 46.5% | 61.3% | 0.615 | 471 ms | 11.9 min | **4.0¢** |
 | Amazon Rekognition | 0.698 [0.674, 0.722] | 0.569 [0.545, 0.591] | 30.2% | 41.2% | 0.443 | **148 ms** | **3.7 min** | $1.00 |
 
+[![Full results card: every metric and F1 by content category](assets/benchmark-table.png)](assets/benchmark-table.html)
+
 What stands out:
 
 - **The three newer models are statistically tied on ranking.** Their AUROC intervals overlap almost completely (0.856–0.866), and all three sit far above Rekognition (0.698). Rekognition trails even on the categories it was built for: on sexual content its AUROC is 0.83 against 0.92 for both decision models.

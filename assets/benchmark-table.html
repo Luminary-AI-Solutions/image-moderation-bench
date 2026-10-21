@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Image moderation benchmark, full results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#FBF8F6}
+.card{width:1600px;height:900px;padding:44px 72px 40px;display:flex;flex-direction:column;gap:24px;background:#FBF8F6;color:#142230;font:400 15px/1.55 "Instrument Sans",system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.top{display:flex;align-items:center;justify-content:space-between}
+.lockup{display:flex;align-items:center;gap:16px;font:700 30px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-0.03em}
+.stamp{font:500 14px/1 "JetBrains Mono",monospace;letter-spacing:0.08em;color:#9A5B00}
+.intro{display:flex;flex-direction:column;gap:10px}
+.kicker{font:600 17px/1.2 "Instrument Sans",sans-serif;color:#B03649}
+h1{margin:0;font:700 46px/1.04 "Bricolage Grotesque",sans-serif;letter-spacing:-0.035em;text-wrap:balance}
+.lede{margin:0;font-size:18px;line-height:1.5;color:#3A4552;max-width:1280px}
+.panel{background:#FFFFFF;border:1px solid #E6DFDB;border-radius:18px;padding:26px 28px;display:flex;flex-direction:column;gap:18px}
+.panel h2{margin:0;font:700 22px/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-0.02em}
+.panel h2 small{display:block;margin-top:6px;font:400 14px/1.3 "Instrument Sans",sans-serif;color:#5E6672;letter-spacing:0}
+.dot{display:inline-block;width:12px;height:12px;border-radius:999px;flex:none}
+table{width:100%;border-collapse:collapse;font-size:15px}
+thead th{font:600 12.5px/1.25 "Instrument Sans",sans-serif;color:#5E6672;text-align:right;padding:0 0 10px 10px;vertical-align:bottom}
+thead th:first-child{text-align:left;padding-left:0}
+tbody th{text-align:left;font-weight:600;white-space:nowrap}
+tbody th span.name{display:flex;align-items:center;gap:10px}
+tbody td{text-align:right;white-space:nowrap}
+tbody tr+tr th,tbody tr+tr td{border-top:1px solid #EFEAE6}
+.note{margin:0;color:#5E6672;font-size:13px;line-height:1.45}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;color:#5E6672;font-size:13.5px;line-height:1.45}
+.foot p{margin:0;max-width:900px}
+.repo{text-decoration:none;display:flex;align-items:center;padding:10px 16px;border-radius:999px;background:#003D5B;color:#F4F8FA;font:500 14px/1 "JetBrains Mono",monospace;white-space:nowrap}
+.card{gap:20px}
+h1{font-size:40px}
+.tables{display:flex;flex-direction:column;gap:16px;flex:1;min-height:0}
+.panel{padding:18px 26px;gap:10px}
+.panel h2{font-size:20px}
+.panel h2 small{margin-top:4px;font-size:13px}
+thead th{padding-bottom:6px}
+tbody th,tbody td{padding-top:7px;padding-bottom:7px}
+tbody td{padding-left:8px}
+td.best{font-weight:700}
+.cats thead th{width:7.4%}
+.cats thead th:first-child{width:auto}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="top">
+    <div class="lockup"><svg viewBox="0 0 64 64" width="44" height="44" aria-hidden="true"><rect width="64" height="64" rx="17" fill="#D1495B"/><path d="M12.5 16.5h5.2l4.2-7.1a4 4 0 0 1 3.4-1.9h11.4a4 4 0 0 1 3.4 1.9l4.2 7.1H51.5a9 9 0 0 1 9 9v22.5a9 9 0 0 1-9 9h-39a9 9 0 0 1-9-9V25.5a9 9 0 0 1 9-9z" fill="#B53A4B"/><rect x="7.5" y="9.6" width="7.4" height="3.6" rx="1.8" fill="#B53A4B"/><circle cx="31.5" cy="35.5" r="11.6" fill="#003D5B"/><path d="M24.36 32.9A7.6 7.6 0 0 1 28.29 28.61" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="2.4" stroke-linecap="round"/><path d="M42.8 25.33A15.2 15.2 0 1 0 43.48 44.86" stroke="#FFFFFF" stroke-width="7.6" stroke-linecap="round" fill="none"/><circle cx="51.2" cy="15.8" r="3.6" fill="#EDAE49"/><path d="M46.6 9.6l-2.2-2.2M51.2 7.6V4.4M55.8 9.6l2.2-2.2" stroke="#EDAE49" stroke-width="2.4" stroke-linecap="round"/></svg><span>candids</span></div>
+    <div class="stamp">'26 10 21</div>
+  </div>
+  <div class="intro">
+    <div class="kicker">Full results on the UnsafeBench test split</div>
+    <h1>Full results by model and by content category</h1>
+    <p class="lede">Bold marks the best score in each ranked column. Differences of a few hundredths are within the bootstrap intervals, so read close scores as ties.</p>
+  </div>
+  <div class="tables">
+    <section class="panel">
+      <h2>Overall<small>2,037 test images at each model's train-chosen threshold. Own-verdict F1 uses each model's out-of-the-box call with no threshold.</small></h2>
+      <table>
+        <thead><tr><th>Model</th><th>AUROC</th><th>Average<br>precision</th><th>F1</th><th>Precision</th><th>Recall</th><th>Safe images<br>flagged</th><th>Recall at<br>5% false flags</th><th>Recall at<br>10% false flags</th><th>Own-verdict<br>F1</th><th>Category<br>accuracy</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#30638E"></span>TypeSafe Jev 1.14</span></th><td class="best">0.866</td><td class="best">0.813</td><td>0.721</td><td>65.5%</td><td>80.1%</td><td>26.0%</td><td class="best">50.7%</td><td class="best">62.0%</td><td class="best">0.710</td><td class="best">55.7%</td></tr>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#B03649"></span>Claude Haiku 5.5</span></th><td>0.859</td><td>0.774</td><td class="best">0.736</td><td>65.6%</td><td>83.9%</td><td>27.1%</td><td>31.4%</td><td>54.6%</td><td>0.691</td><td>49.7%</td></tr>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#00798C"></span>Cloudflare clef-flash</span></th><td>0.856</td><td>0.802</td><td>0.715</td><td>62.5%</td><td>83.7%</td><td>31.0%</td><td>46.5%</td><td>61.3%</td><td>0.615</td><td>54.2%</td></tr>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#5E6672"></span>Amazon Rekognition</span></th><td>0.698</td><td>0.621</td><td>0.569</td><td>40.7%</td><td>94.9%</td><td>85.4%</td><td>30.2%</td><td>41.2%</td><td>0.443</td><td>n/a</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="panel">
+      <h2>F1 by content category<small>Same threshold, scored within each of UnsafeBench's 11 categories (about 185 test images each).</small></h2>
+      <table class="cats">
+        <thead><tr><th>Model</th><th>Hate</th><th>Harass&shy;ment</th><th>Violence</th><th>Self-harm</th><th>Sexual</th><th>Shocking</th><th>Illegal activity</th><th>Deception</th><th>Political</th><th>Health</th><th>Spam</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#30638E"></span>TypeSafe Jev 1.14</span></th><td>0.316</td><td class="best">0.653</td><td>0.734</td><td>0.530</td><td class="best">0.898</td><td>0.707</td><td>0.804</td><td>0.690</td><td>0.806</td><td>0.645</td><td>0.489</td></tr>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#B03649"></span>Claude Haiku 5.5</span></th><td class="best">0.444</td><td>0.602</td><td class="best">0.735</td><td>0.519</td><td>0.878</td><td>0.752</td><td class="best">0.814</td><td class="best">0.737</td><td class="best">0.819</td><td class="best">0.647</td><td>0.579</td></tr>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#00798C"></span>Cloudflare clef-flash</span></th><td>0.361</td><td>0.537</td><td>0.728</td><td class="best">0.532</td><td>0.857</td><td class="best">0.794</td><td>0.812</td><td>0.585</td><td>0.778</td><td>0.632</td><td class="best">0.718</td></tr>
+          <tr><th scope="row"><span class="name"><span class="dot" style="background:#5E6672"></span>Amazon Rekognition</span></th><td>0.267</td><td>0.378</td><td>0.617</td><td>0.262</td><td>0.830</td><td>0.689</td><td>0.638</td><td>0.503</td><td>0.710</td><td>0.565</td><td>0.508</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <div class="foot">
+    <p>Every model saw the same images and the same prompt (Rekognition takes none). Thresholds come from the 8,109-image train split; the test split never influenced them. Methodology, per-image outputs and code to rerun it are in the repository.</p>
+    <a class="repo" href="https://github.com/Luminary-AI-Solutions/image-moderation-bench">github.com/Luminary-AI-Solutions/image-moderation-bench</a>
+  </div>
+</main>
+</body>
+</html>
