@@ -1,0 +1,319 @@
+{
+  "dataset": "UnsafeBench (yiting/UnsafeBench), train 8,109 + test 2,037",
+  "protocol": "Same prompt for every model; threshold = best F1 on train, headline metrics on test",
+  "generatedAt": "2026-10-21T19:01:50.792Z",
+  "models": [
+    {
+      "model": "clef-flash",
+      "label": "Cloudflare clef-flash",
+      "provider": "Cloudflare Workers AI",
+      "id": "@cf/cloudflare/clef-flash",
+      "test": {
+        "n": 2037,
+        "auroc": 0.856,
+        "aurocCi": [
+          0.839,
+          0.872
+        ],
+        "averagePrecision": 0.802,
+        "f1": 0.715,
+        "f1Ci": [
+          0.69,
+          0.738
+        ],
+        "precision": 0.625,
+        "recall": 0.837,
+        "falsePositiveRate": 0.31,
+        "recallAt5Fpr": 0.465,
+        "recallAt10Fpr": 0.613,
+        "verdictF1": 0.615,
+        "categoryAccuracy": 0.542,
+        "bySource": {
+          "Laion5B": {
+            "auroc": 0.867,
+            "f1": 0.71
+          },
+          "Lexica": {
+            "auroc": 0.843,
+            "f1": 0.72
+          }
+        },
+        "categoryF1": {
+          "hate": 0.361,
+          "harassment": 0.537,
+          "violence": 0.728,
+          "self_harm": 0.532,
+          "sexual": 0.857,
+          "shocking": 0.794,
+          "illegal_activity": 0.812,
+          "deception": 0.585,
+          "political": 0.778,
+          "public_and_personal_health": 0.632,
+          "spam": 0.718
+        }
+      },
+      "all": {
+        "n": 10146,
+        "auroc": 0.83,
+        "f1": 0.703
+      },
+      "threshold": 0.127,
+      "refusals": 0,
+      "errors": 0,
+      "latencyMs": {
+        "p50": 471,
+        "p90": 874,
+        "p95": 1010,
+        "p99": 1445,
+        "mean": 554
+      },
+      "job": {
+        "images": 10146,
+        "concurrency": 8,
+        "wallSeconds": 711.2,
+        "imagesPerSecond": 14.27,
+        "complete": true
+      },
+      "cost": {
+        "totalUsd": 0.4034,
+        "per1kImagesUsd": 0.0398,
+        "meanInputTokens": 1046,
+        "meanOutputTokens": 0
+      }
+    },
+    {
+      "model": "jev",
+      "label": "TypeSafe Jev 1.14",
+      "provider": "OpenRouter (Decisions API)",
+      "id": "typesafe/jev-1.14",
+      "test": {
+        "n": 2037,
+        "auroc": 0.866,
+        "aurocCi": [
+          0.848,
+          0.882
+        ],
+        "averagePrecision": 0.813,
+        "f1": 0.721,
+        "f1Ci": [
+          0.696,
+          0.745
+        ],
+        "precision": 0.655,
+        "recall": 0.801,
+        "falsePositiveRate": 0.26,
+        "recallAt5Fpr": 0.507,
+        "recallAt10Fpr": 0.62,
+        "verdictF1": 0.71,
+        "categoryAccuracy": 0.557,
+        "bySource": {
+          "Laion5B": {
+            "auroc": 0.881,
+            "f1": 0.732
+          },
+          "Lexica": {
+            "auroc": 0.848,
+            "f1": 0.711
+          }
+        },
+        "categoryF1": {
+          "hate": 0.316,
+          "harassment": 0.653,
+          "violence": 0.734,
+          "self_harm": 0.53,
+          "sexual": 0.898,
+          "shocking": 0.707,
+          "illegal_activity": 0.804,
+          "deception": 0.69,
+          "political": 0.806,
+          "public_and_personal_health": 0.645,
+          "spam": 0.489
+        }
+      },
+      "all": {
+        "n": 10146,
+        "auroc": 0.843,
+        "f1": 0.712
+      },
+      "threshold": 0.23,
+      "refusals": 0,
+      "errors": 0,
+      "latencyMs": {
+        "p50": 162,
+        "p90": 258,
+        "p95": 313,
+        "p99": 562,
+        "mean": 183
+      },
+      "job": {
+        "images": 10146,
+        "concurrency": 8,
+        "wallSeconds": 240.2,
+        "imagesPerSecond": 42.24,
+        "complete": true
+      },
+      "cost": {
+        "totalUsd": 0.7769,
+        "per1kImagesUsd": 0.0766,
+        "meanInputTokens": 1823,
+        "meanOutputTokens": 141
+      }
+    },
+    {
+      "model": "haiku-5.5",
+      "label": "Claude Haiku 5.5",
+      "provider": "Anthropic API",
+      "id": "claude-haiku-5-5",
+      "test": {
+        "n": 2037,
+        "auroc": 0.859,
+        "aurocCi": [
+          0.841,
+          0.875
+        ],
+        "averagePrecision": 0.774,
+        "f1": 0.736,
+        "f1Ci": [
+          0.714,
+          0.759
+        ],
+        "precision": 0.656,
+        "recall": 0.839,
+        "falsePositiveRate": 0.271,
+        "recallAt5Fpr": 0.314,
+        "recallAt10Fpr": 0.546,
+        "verdictF1": 0.691,
+        "categoryAccuracy": 0.497,
+        "bySource": {
+          "Laion5B": {
+            "auroc": 0.88,
+            "f1": 0.74
+          },
+          "Lexica": {
+            "auroc": 0.835,
+            "f1": 0.733
+          }
+        },
+        "categoryF1": {
+          "hate": 0.444,
+          "harassment": 0.602,
+          "violence": 0.735,
+          "self_harm": 0.519,
+          "sexual": 0.878,
+          "shocking": 0.752,
+          "illegal_activity": 0.814,
+          "deception": 0.737,
+          "political": 0.819,
+          "public_and_personal_health": 0.647,
+          "spam": 0.579
+        }
+      },
+      "all": {
+        "n": 10146,
+        "auroc": 0.84,
+        "f1": 0.719
+      },
+      "threshold": 0.15,
+      "refusals": 0,
+      "errors": 0,
+      "latencyMs": {
+        "p50": 1234,
+        "p90": 1795,
+        "p95": 2021,
+        "p99": 8126,
+        "mean": 1372
+      },
+      "job": {
+        "images": 10146,
+        "concurrency": 8,
+        "wallSeconds": 1748.2,
+        "imagesPerSecond": 5.8,
+        "complete": true
+      },
+      "cost": {
+        "totalUsd": 1.8512,
+        "per1kImagesUsd": 0.1825,
+        "meanInputTokens": 1666,
+        "meanOutputTokens": 32
+      }
+    },
+    {
+      "model": "rekognition",
+      "label": "Amazon Rekognition",
+      "provider": "AWS (DetectModerationLabels)",
+      "id": "DetectModerationLabels",
+      "test": {
+        "n": 2037,
+        "auroc": 0.698,
+        "aurocCi": [
+          0.674,
+          0.722
+        ],
+        "averagePrecision": 0.621,
+        "f1": 0.569,
+        "f1Ci": [
+          0.545,
+          0.591
+        ],
+        "precision": 0.407,
+        "recall": 0.949,
+        "falsePositiveRate": 0.854,
+        "recallAt5Fpr": 0.302,
+        "recallAt10Fpr": 0.412,
+        "verdictF1": 0.443,
+        "categoryAccuracy": null,
+        "bySource": {
+          "Laion5B": {
+            "auroc": 0.679,
+            "f1": 0.534
+          },
+          "Lexica": {
+            "auroc": 0.71,
+            "f1": 0.602
+          }
+        },
+        "categoryF1": {
+          "hate": 0.267,
+          "harassment": 0.378,
+          "violence": 0.617,
+          "self_harm": 0.262,
+          "sexual": 0.83,
+          "shocking": 0.689,
+          "illegal_activity": 0.638,
+          "deception": 0.503,
+          "political": 0.71,
+          "public_and_personal_health": 0.565,
+          "spam": 0.508
+        }
+      },
+      "all": {
+        "n": 10146,
+        "auroc": 0.674,
+        "f1": 0.581
+      },
+      "threshold": 0,
+      "refusals": 0,
+      "errors": 0,
+      "latencyMs": {
+        "p50": 148,
+        "p90": 252,
+        "p95": 299,
+        "p99": 432,
+        "mean": 169
+      },
+      "job": {
+        "images": 10146,
+        "concurrency": 8,
+        "wallSeconds": 222.1,
+        "imagesPerSecond": 45.69,
+        "complete": true
+      },
+      "cost": {
+        "totalUsd": 10.146,
+        "per1kImagesUsd": 1,
+        "meanInputTokens": 0,
+        "meanOutputTokens": 0
+      }
+    }
+  ]
+}

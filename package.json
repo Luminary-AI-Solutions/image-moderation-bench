@@ -1,0 +1,37 @@
+{
+  "name": "image-moderation-bench",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Image moderation benchmark for decision models (Cloudflare clef-flash, TypeSafe Jev) and Claude Haiku 5.5 on UnsafeBench.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "bench": "node --env-file-if-exists=.env src/run.ts",
+    "leaderboard": "node src/leaderboard.ts",
+    "rescore": "node --env-file-if-exists=.env src/rescore.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "check": "biome check . && tsc --noEmit && vitest run",
+    "card": "node src/card.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.0.0",
+    "@aws-sdk/client-rekognition": "^3.1154.0",
+    "@tanstack/ai": "^0.71.0",
+    "@tanstack/ai-cloudflare": "^0.3.2",
+    "@tanstack/ai-openrouter": "^0.23.1",
+    "hyparquet": "^1.31.5",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}

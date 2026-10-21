@@ -1,0 +1,14 @@
+[
+  {
+    "startedAt": "2026-10-21T18:32:17.044Z",
+    "wallMs": 1748182.3055,
+    "images": 10146,
+    "concurrency": 8
+  },
+  {
+    "startedAt": "2026-10-21T19:01:37.756Z",
+    "wallMs": 886.6228000000001,
+    "images": 1,
+    "concurrency": 8
+  }
+]

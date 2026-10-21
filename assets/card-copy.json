@@ -1,0 +1,5 @@
+{
+  "headline": "Three newer models catch unsafe images far better than Amazon Rekognition, for as little as 4¢ per thousand",
+  "lede": "We ran Cloudflare clef-flash, TypeSafe Jev, Claude Haiku 5.5 and Amazon Rekognition over all 10,146 images in UnsafeBench. The three newer models rank unsafe images about equally well, and each costs a fraction of Rekognition.",
+  "stamp": "'26 10 21"
+}

@@ -1,0 +1,1442 @@
+{
+  "model": "clef-flash",
+  "label": "Cloudflare clef-flash",
+  "provider": "Cloudflare Workers AI",
+  "id": "@cf/cloudflare/clef-flash",
+  "usdPerMillion": {
+    "input": 0.038,
+    "output": 0
+  },
+  "minSide": 0,
+  "scored": 10146,
+  "errors": 0,
+  "refusals": 0,
+  "threshold": 0.1268,
+  "thresholdFrom": "train split best F1",
+  "test": {
+    "overall": {
+      "n": 2037,
+      "auroc": 0.8558645380073951,
+      "averagePrecision": 0.8021348384473547,
+      "ece": 0.10992449680903288,
+      "recallAt5Fpr": 0.4646074646074646,
+      "recallAt10Fpr": 0.6126126126126126,
+      "atThreshold": {
+        "threshold": 0.1268,
+        "tp": 650,
+        "fp": 390,
+        "tn": 870,
+        "fn": 127,
+        "precision": 0.625,
+        "recall": 0.8365508365508365,
+        "f1": 0.7154650522839846,
+        "falsePositiveRate": 0.30952380952380953,
+        "accuracy": 0.7461953853706431
+      },
+      "verdict": {
+        "threshold": 0.5,
+        "tp": 380,
+        "fp": 79,
+        "tn": 1181,
+        "fn": 397,
+        "precision": 0.8278867102396514,
+        "recall": 0.48906048906048905,
+        "f1": 0.6148867313915858,
+        "falsePositiveRate": 0.0626984126984127,
+        "accuracy": 0.7663230240549829
+      },
+      "ci": {
+        "auroc": [
+          0.8386450267594245,
+          0.871856154126361
+        ],
+        "f1": [
+          0.6902050113895216,
+          0.7380824852704875
+        ]
+      }
+    },
+    "bySource": {
+      "Laion5B": {
+        "n": 1015,
+        "auroc": 0.8674151823579305,
+        "averagePrecision": 0.8095469931811455,
+        "ece": 0.1063351724137931,
+        "recallAt5Fpr": 0.48055555555555557,
+        "recallAt10Fpr": 0.6138888888888889,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 286,
+          "fp": 160,
+          "tn": 495,
+          "fn": 74,
+          "precision": 0.6412556053811659,
+          "recall": 0.7944444444444444,
+          "f1": 0.7096774193548386,
+          "falsePositiveRate": 0.24427480916030533,
+          "accuracy": 0.7694581280788177
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 176,
+          "fp": 33,
+          "tn": 622,
+          "fn": 184,
+          "precision": 0.8421052631578947,
+          "recall": 0.4888888888888889,
+          "f1": 0.6186291739894552,
+          "falsePositiveRate": 0.050381679389312976,
+          "accuracy": 0.7862068965517242
+        },
+        "ci": {
+          "auroc": [
+            0.8428231975399629,
+            0.8893004603916983
+          ],
+          "f1": [
+            0.671604938271605,
+            0.7458823529411764
+          ]
+        }
+      },
+      "Lexica": {
+        "n": 1022,
+        "auroc": 0.8427433260003567,
+        "averagePrecision": 0.7946682061007868,
+        "ece": 0.1162354207436399,
+        "recallAt5Fpr": 0.3645083932853717,
+        "recallAt10Fpr": 0.5899280575539568,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 364,
+          "fp": 230,
+          "tn": 375,
+          "fn": 53,
+          "precision": 0.6127946127946128,
+          "recall": 0.8729016786570744,
+          "f1": 0.7200791295746785,
+          "falsePositiveRate": 0.38016528925619836,
+          "accuracy": 0.723091976516634
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 204,
+          "fp": 46,
+          "tn": 559,
+          "fn": 213,
+          "precision": 0.816,
+          "recall": 0.4892086330935252,
+          "f1": 0.6116941529235382,
+          "falsePositiveRate": 0.07603305785123966,
+          "accuracy": 0.7465753424657534
+        },
+        "ci": {
+          "auroc": [
+            0.8188090790061953,
+            0.8675655137201819
+          ],
+          "f1": [
+            0.6881937436932392,
+            0.7521367521367521
+          ]
+        }
+      }
+    },
+    "byCategory": {
+      "hate": {
+        "n": 199,
+        "auroc": 0.7262677484787018,
+        "averagePrecision": 0.45517408451132957,
+        "ece": 0.08248090452261307,
+        "recallAt5Fpr": 0.27586206896551724,
+        "recallAt10Fpr": 0.3448275862068966,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 22,
+          "fp": 71,
+          "tn": 99,
+          "fn": 7,
+          "precision": 0.23655913978494625,
+          "recall": 0.7586206896551724,
+          "f1": 0.36065573770491804,
+          "falsePositiveRate": 0.4176470588235294,
+          "accuracy": 0.6080402010050251
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 10,
+          "fp": 16,
+          "tn": 154,
+          "fn": 19,
+          "precision": 0.38461538461538464,
+          "recall": 0.3448275862068966,
+          "f1": 0.3636363636363637,
+          "falsePositiveRate": 0.09411764705882353,
+          "accuracy": 0.8241206030150754
+        }
+      },
+      "harassment": {
+        "n": 187,
+        "auroc": 0.8392006802721088,
+        "averagePrecision": 0.6810337294431095,
+        "ece": 0.07225080213903745,
+        "recallAt5Fpr": 0.575,
+        "recallAt10Fpr": 0.575,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 29,
+          "fp": 39,
+          "tn": 108,
+          "fn": 11,
+          "precision": 0.4264705882352941,
+          "recall": 0.725,
+          "f1": 0.537037037037037,
+          "falsePositiveRate": 0.2653061224489796,
+          "accuracy": 0.732620320855615
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 17,
+          "fp": 5,
+          "tn": 142,
+          "fn": 23,
+          "precision": 0.7727272727272727,
+          "recall": 0.425,
+          "f1": 0.5483870967741935,
+          "falsePositiveRate": 0.034013605442176874,
+          "accuracy": 0.8502673796791443
+        }
+      },
+      "violence": {
+        "n": 193,
+        "auroc": 0.8733066844326005,
+        "averagePrecision": 0.8073160949980016,
+        "ece": 0.05437253886010361,
+        "recallAt5Fpr": 0.34177215189873417,
+        "recallAt10Fpr": 0.620253164556962,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 75,
+          "fp": 52,
+          "tn": 62,
+          "fn": 4,
+          "precision": 0.5905511811023622,
+          "recall": 0.9493670886075949,
+          "f1": 0.7281553398058251,
+          "falsePositiveRate": 0.45614035087719296,
+          "accuracy": 0.7098445595854922
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 56,
+          "fp": 15,
+          "tn": 99,
+          "fn": 23,
+          "precision": 0.7887323943661971,
+          "recall": 0.7088607594936709,
+          "f1": 0.7466666666666666,
+          "falsePositiveRate": 0.13157894736842105,
+          "accuracy": 0.8031088082901554
+        }
+      },
+      "self_harm": {
+        "n": 199,
+        "auroc": 0.9013184584178499,
+        "averagePrecision": 0.7358566043609829,
+        "ece": 0.04593316582914572,
+        "recallAt5Fpr": 0.5862068965517241,
+        "recallAt10Fpr": 0.6896551724137931,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 25,
+          "fp": 40,
+          "tn": 130,
+          "fn": 4,
+          "precision": 0.38461538461538464,
+          "recall": 0.8620689655172413,
+          "f1": 0.5319148936170213,
+          "falsePositiveRate": 0.23529411764705882,
+          "accuracy": 0.7788944723618091
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 14,
+          "fp": 4,
+          "tn": 166,
+          "fn": 15,
+          "precision": 0.7777777777777778,
+          "recall": 0.4827586206896552,
+          "f1": 0.5957446808510638,
+          "falsePositiveRate": 0.023529411764705882,
+          "accuracy": 0.9045226130653267
+        }
+      },
+      "sexual": {
+        "n": 211,
+        "auroc": 0.9156284153005464,
+        "averagePrecision": 0.9657770280171019,
+        "ece": 0.08178625592417069,
+        "recallAt5Fpr": 0.6666666666666666,
+        "recallAt10Fpr": 0.7866666666666666,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 147,
+          "fp": 46,
+          "tn": 15,
+          "fn": 3,
+          "precision": 0.7616580310880829,
+          "recall": 0.98,
+          "f1": 0.8571428571428571,
+          "falsePositiveRate": 0.7540983606557377,
+          "accuracy": 0.7677725118483413
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 138,
+          "fp": 22,
+          "tn": 39,
+          "fn": 12,
+          "precision": 0.8625,
+          "recall": 0.92,
+          "f1": 0.8903225806451613,
+          "falsePositiveRate": 0.36065573770491804,
+          "accuracy": 0.8388625592417062
+        }
+      },
+      "shocking": {
+        "n": 231,
+        "auroc": 0.8694331983805668,
+        "averagePrecision": 0.8756722468700107,
+        "ece": 0.15451558441558444,
+        "recallAt5Fpr": 0.5,
+        "recallAt10Fpr": 0.6578947368421053,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 104,
+          "fp": 44,
+          "tn": 73,
+          "fn": 10,
+          "precision": 0.7027027027027027,
+          "recall": 0.9122807017543859,
+          "f1": 0.7938931297709922,
+          "falsePositiveRate": 0.37606837606837606,
+          "accuracy": 0.7662337662337663
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 57,
+          "fp": 6,
+          "tn": 111,
+          "fn": 57,
+          "precision": 0.9047619047619048,
+          "recall": 0.5,
+          "f1": 0.6440677966101696,
+          "falsePositiveRate": 0.05128205128205128,
+          "accuracy": 0.7272727272727273
+        }
+      },
+      "illegal_activity": {
+        "n": 172,
+        "auroc": 0.9021915584415584,
+        "averagePrecision": 0.8921317905251219,
+        "ece": 0.1839529069767442,
+        "recallAt5Fpr": 0.6704545454545454,
+        "recallAt10Fpr": 0.7045454545454546,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 80,
+          "fp": 29,
+          "tn": 55,
+          "fn": 8,
+          "precision": 0.7339449541284404,
+          "recall": 0.9090909090909091,
+          "f1": 0.8121827411167513,
+          "falsePositiveRate": 0.34523809523809523,
+          "accuracy": 0.7848837209302325
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 53,
+          "fp": 3,
+          "tn": 81,
+          "fn": 35,
+          "precision": 0.9464285714285714,
+          "recall": 0.6022727272727273,
+          "f1": 0.7361111111111112,
+          "falsePositiveRate": 0.03571428571428571,
+          "accuracy": 0.7790697674418605
+        }
+      },
+      "deception": {
+        "n": 163,
+        "auroc": 0.7919469026548672,
+        "averagePrecision": 0.6008982174628712,
+        "ece": 0.1790411042944785,
+        "recallAt5Fpr": 0.3,
+        "recallAt10Fpr": 0.36,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 31,
+          "fp": 25,
+          "tn": 88,
+          "fn": 19,
+          "precision": 0.5535714285714286,
+          "recall": 0.62,
+          "f1": 0.5849056603773586,
+          "falsePositiveRate": 0.22123893805309736,
+          "accuracy": 0.7300613496932515
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 5,
+          "fp": 3,
+          "tn": 110,
+          "fn": 45,
+          "precision": 0.625,
+          "recall": 0.1,
+          "f1": 0.1724137931034483,
+          "falsePositiveRate": 0.02654867256637168,
+          "accuracy": 0.7055214723926381
+        }
+      },
+      "political": {
+        "n": 167,
+        "auroc": 0.8878687102371313,
+        "averagePrecision": 0.9135804439923938,
+        "ece": 0.3551431137724551,
+        "recallAt5Fpr": 0.5824175824175825,
+        "recallAt10Fpr": 0.6373626373626373,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 65,
+          "fp": 11,
+          "tn": 65,
+          "fn": 26,
+          "precision": 0.8552631578947368,
+          "recall": 0.7142857142857143,
+          "f1": 0.778443113772455,
+          "falsePositiveRate": 0.14473684210526316,
+          "accuracy": 0.7784431137724551
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 14,
+          "fp": 0,
+          "tn": 76,
+          "fn": 77,
+          "precision": 1,
+          "recall": 0.15384615384615385,
+          "f1": 0.2666666666666667,
+          "falsePositiveRate": 0,
+          "accuracy": 0.5389221556886228
+        }
+      },
+      "public_and_personal_health": {
+        "n": 155,
+        "auroc": 0.858,
+        "averagePrecision": 0.7463437318416688,
+        "ece": 0.2323806451612903,
+        "recallAt5Fpr": 0.4727272727272727,
+        "recallAt10Fpr": 0.5454545454545454,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 30,
+          "fp": 10,
+          "tn": 90,
+          "fn": 25,
+          "precision": 0.75,
+          "recall": 0.5454545454545454,
+          "f1": 0.631578947368421,
+          "falsePositiveRate": 0.1,
+          "accuracy": 0.7741935483870968
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 6,
+          "fp": 2,
+          "tn": 98,
+          "fn": 49,
+          "precision": 0.75,
+          "recall": 0.10909090909090909,
+          "f1": 0.19047619047619047,
+          "falsePositiveRate": 0.02,
+          "accuracy": 0.6709677419354839
+        }
+      },
+      "spam": {
+        "n": 160,
+        "auroc": 0.8196225071225072,
+        "averagePrecision": 0.6716975640441574,
+        "ece": 0.16721562499999998,
+        "recallAt5Fpr": 0.25,
+        "recallAt10Fpr": 0.3269230769230769,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 42,
+          "fp": 23,
+          "tn": 85,
+          "fn": 10,
+          "precision": 0.6461538461538462,
+          "recall": 0.8076923076923077,
+          "f1": 0.717948717948718,
+          "falsePositiveRate": 0.21296296296296297,
+          "accuracy": 0.79375
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 10,
+          "fp": 3,
+          "tn": 105,
+          "fn": 42,
+          "precision": 0.7692307692307693,
+          "recall": 0.19230769230769232,
+          "f1": 0.3076923076923077,
+          "falsePositiveRate": 0.027777777777777776,
+          "accuracy": 0.71875
+        }
+      }
+    },
+    "categoryAnswered": 2037,
+    "category": {
+      "accuracy": 0.5419734904270986,
+      "macroF1": 0.5156324094621983,
+      "perClass": {
+        "hate": {
+          "precision": 0.56,
+          "recall": 0.7035175879396985,
+          "f1": 0.6236080178173721,
+          "support": 199
+        },
+        "harassment": {
+          "precision": 0.6304347826086957,
+          "recall": 0.15508021390374332,
+          "f1": 0.24892703862660942,
+          "support": 187
+        },
+        "violence": {
+          "precision": 0.48484848484848486,
+          "recall": 0.3316062176165803,
+          "f1": 0.39384615384615385,
+          "support": 193
+        },
+        "self_harm": {
+          "precision": 0.7311827956989247,
+          "recall": 0.3417085427135678,
+          "f1": 0.4657534246575343,
+          "support": 199
+        },
+        "sexual": {
+          "precision": 0.4584323040380047,
+          "recall": 0.9146919431279621,
+          "f1": 0.6107594936708861,
+          "support": 211
+        },
+        "shocking": {
+          "precision": 0.672514619883041,
+          "recall": 0.49783549783549785,
+          "f1": 0.5721393034825871,
+          "support": 231
+        },
+        "illegal_activity": {
+          "precision": 0.4883720930232558,
+          "recall": 0.6104651162790697,
+          "f1": 0.5426356589147286,
+          "support": 172
+        },
+        "deception": {
+          "precision": 0.9880952380952381,
+          "recall": 0.50920245398773,
+          "f1": 0.6720647773279352,
+          "support": 163
+        },
+        "political": {
+          "precision": 0.5617977528089888,
+          "recall": 0.8982035928143712,
+          "f1": 0.6912442396313364,
+          "support": 167
+        },
+        "public_and_personal_health": {
+          "precision": 0.46616541353383456,
+          "recall": 0.8,
+          "f1": 0.5890736342042755,
+          "support": 155
+        },
+        "spam": {
+          "precision": 0.358695652173913,
+          "recall": 0.20625,
+          "f1": 0.26190476190476186,
+          "support": 160
+        }
+      },
+      "confusion": {
+        "hate": {
+          "hate": 140,
+          "harassment": 0,
+          "violence": 3,
+          "self_harm": 0,
+          "sexual": 6,
+          "shocking": 12,
+          "illegal_activity": 3,
+          "deception": 0,
+          "political": 22,
+          "public_and_personal_health": 7,
+          "spam": 6
+        },
+        "harassment": {
+          "hate": 22,
+          "harassment": 29,
+          "violence": 12,
+          "self_harm": 7,
+          "sexual": 61,
+          "shocking": 8,
+          "illegal_activity": 3,
+          "deception": 1,
+          "political": 18,
+          "public_and_personal_health": 18,
+          "spam": 8
+        },
+        "violence": {
+          "hate": 15,
+          "harassment": 11,
+          "violence": 64,
+          "self_harm": 12,
+          "sexual": 20,
+          "shocking": 10,
+          "illegal_activity": 35,
+          "deception": 0,
+          "political": 7,
+          "public_and_personal_health": 16,
+          "spam": 3
+        },
+        "self_harm": {
+          "hate": 9,
+          "harassment": 0,
+          "violence": 14,
+          "self_harm": 68,
+          "sexual": 41,
+          "shocking": 9,
+          "illegal_activity": 13,
+          "deception": 0,
+          "political": 3,
+          "public_and_personal_health": 35,
+          "spam": 7
+        },
+        "sexual": {
+          "hate": 1,
+          "harassment": 0,
+          "violence": 0,
+          "self_harm": 0,
+          "sexual": 193,
+          "shocking": 4,
+          "illegal_activity": 3,
+          "deception": 0,
+          "political": 1,
+          "public_and_personal_health": 3,
+          "spam": 6
+        },
+        "shocking": {
+          "hate": 18,
+          "harassment": 2,
+          "violence": 15,
+          "self_harm": 3,
+          "sexual": 38,
+          "shocking": 115,
+          "illegal_activity": 6,
+          "deception": 0,
+          "political": 3,
+          "public_and_personal_health": 21,
+          "spam": 10
+        },
+        "illegal_activity": {
+          "hate": 15,
+          "harassment": 1,
+          "violence": 8,
+          "self_harm": 1,
+          "sexual": 14,
+          "shocking": 0,
+          "illegal_activity": 105,
+          "deception": 0,
+          "political": 13,
+          "public_and_personal_health": 6,
+          "spam": 9
+        },
+        "deception": {
+          "hate": 10,
+          "harassment": 2,
+          "violence": 12,
+          "self_harm": 0,
+          "sexual": 7,
+          "shocking": 3,
+          "illegal_activity": 2,
+          "deception": 83,
+          "political": 31,
+          "public_and_personal_health": 5,
+          "spam": 8
+        },
+        "political": {
+          "hate": 6,
+          "harassment": 0,
+          "violence": 2,
+          "self_harm": 0,
+          "sexual": 2,
+          "shocking": 1,
+          "illegal_activity": 4,
+          "deception": 0,
+          "political": 150,
+          "public_and_personal_health": 0,
+          "spam": 2
+        },
+        "public_and_personal_health": {
+          "hate": 0,
+          "harassment": 0,
+          "violence": 2,
+          "self_harm": 1,
+          "sexual": 7,
+          "shocking": 3,
+          "illegal_activity": 15,
+          "deception": 0,
+          "political": 3,
+          "public_and_personal_health": 124,
+          "spam": 0
+        },
+        "spam": {
+          "hate": 14,
+          "harassment": 1,
+          "violence": 0,
+          "self_harm": 1,
+          "sexual": 32,
+          "shocking": 6,
+          "illegal_activity": 26,
+          "deception": 0,
+          "political": 16,
+          "public_and_personal_health": 31,
+          "spam": 33
+        }
+      }
+    }
+  },
+  "all": {
+    "overall": {
+      "n": 10146,
+      "auroc": 0.8295092985518482,
+      "averagePrecision": 0.7832738646411359,
+      "ece": 0.12297947959787099,
+      "recallAt5Fpr": 0.4093379446640316,
+      "recallAt10Fpr": 0.545207509881423,
+      "atThreshold": {
+        "threshold": 0.1268,
+        "tp": 3265,
+        "fp": 1974,
+        "tn": 4124,
+        "fn": 783,
+        "precision": 0.6232105363619012,
+        "recall": 0.8065711462450593,
+        "f1": 0.7031334122967589,
+        "falsePositiveRate": 0.3237126926861266,
+        "accuracy": 0.7282672974571259
+      },
+      "verdict": {
+        "threshold": 0.5,
+        "tp": 1893,
+        "fp": 421,
+        "tn": 5677,
+        "fn": 2155,
+        "precision": 0.8180639585133967,
+        "recall": 0.4676383399209486,
+        "f1": 0.5950958817981766,
+        "falsePositiveRate": 0.06903902918989832,
+        "accuracy": 0.7461068401340429
+      },
+      "ci": {
+        "auroc": [
+          0.8211312492623676,
+          0.8368283471673201
+        ],
+        "f1": [
+          0.6925516788800176,
+          0.7133976420150054
+        ]
+      }
+    },
+    "bySource": {
+      "Laion5B": {
+        "n": 5060,
+        "auroc": 0.8327044542025833,
+        "averagePrecision": 0.7691235868107015,
+        "ece": 0.12417671936758899,
+        "recallAt5Fpr": 0.4383187772925764,
+        "recallAt10Fpr": 0.5567685589519651,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 1362,
+          "fp": 820,
+          "tn": 2408,
+          "fn": 470,
+          "precision": 0.6241979835013749,
+          "recall": 0.7434497816593887,
+          "f1": 0.6786248131539612,
+          "falsePositiveRate": 0.2540272614622057,
+          "accuracy": 0.7450592885375494
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 809,
+          "fp": 163,
+          "tn": 3065,
+          "fn": 1023,
+          "precision": 0.8323045267489712,
+          "recall": 0.4415938864628821,
+          "f1": 0.5770328102710414,
+          "falsePositiveRate": 0.050495662949194546,
+          "accuracy": 0.7656126482213439
+        },
+        "ci": {
+          "auroc": [
+            0.8211145277013541,
+            0.8441757080734524
+          ],
+          "f1": [
+            0.6609442060085837,
+            0.6949357887085049
+          ]
+        }
+      },
+      "Lexica": {
+        "n": 5086,
+        "auroc": 0.8232475408495704,
+        "averagePrecision": 0.793717106458842,
+        "ece": 0.12342882422335821,
+        "recallAt5Fpr": 0.3704873646209386,
+        "recallAt10Fpr": 0.5117328519855595,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 1903,
+          "fp": 1154,
+          "tn": 1716,
+          "fn": 313,
+          "precision": 0.6225057245665685,
+          "recall": 0.858754512635379,
+          "f1": 0.7217902522283329,
+          "falsePositiveRate": 0.4020905923344948,
+          "accuracy": 0.7115611482500983
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 1084,
+          "fp": 258,
+          "tn": 2612,
+          "fn": 1132,
+          "precision": 0.8077496274217586,
+          "recall": 0.4891696750902527,
+          "f1": 0.6093310848791456,
+          "falsePositiveRate": 0.08989547038327526,
+          "accuracy": 0.7267007471490365
+        },
+        "ci": {
+          "auroc": [
+            0.8117817223665936,
+            0.8340593248671503
+          ],
+          "f1": [
+            0.7079578139980826,
+            0.7353443369379624
+          ]
+        }
+      }
+    },
+    "byCategory": {
+      "hate": {
+        "n": 990,
+        "auroc": 0.7242319277108433,
+        "averagePrecision": 0.40184110200895934,
+        "ece": 0.06423262626262626,
+        "recallAt5Fpr": 0.225,
+        "recallAt10Fpr": 0.29375,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 125,
+          "fp": 342,
+          "tn": 488,
+          "fn": 35,
+          "precision": 0.2676659528907923,
+          "recall": 0.78125,
+          "f1": 0.39872408293460926,
+          "falsePositiveRate": 0.41204819277108434,
+          "accuracy": 0.6191919191919192
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 41,
+          "fp": 63,
+          "tn": 767,
+          "fn": 119,
+          "precision": 0.3942307692307692,
+          "recall": 0.25625,
+          "f1": 0.31060606060606055,
+          "falsePositiveRate": 0.07590361445783132,
+          "accuracy": 0.8161616161616162
+        }
+      },
+      "harassment": {
+        "n": 933,
+        "auroc": 0.8520282058738006,
+        "averagePrecision": 0.6838091292946632,
+        "ece": 0.037242550911039646,
+        "recallAt5Fpr": 0.49760765550239233,
+        "recallAt10Fpr": 0.6076555023923444,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 166,
+          "fp": 212,
+          "tn": 512,
+          "fn": 43,
+          "precision": 0.43915343915343913,
+          "recall": 0.7942583732057417,
+          "f1": 0.565587734241908,
+          "falsePositiveRate": 0.292817679558011,
+          "accuracy": 0.7266881028938906
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 99,
+          "fp": 28,
+          "tn": 696,
+          "fn": 110,
+          "precision": 0.7795275590551181,
+          "recall": 0.47368421052631576,
+          "f1": 0.5892857142857143,
+          "falsePositiveRate": 0.03867403314917127,
+          "accuracy": 0.8520900321543409
+        }
+      },
+      "violence": {
+        "n": 960,
+        "auroc": 0.8710519997865945,
+        "averagePrecision": 0.8178055112037341,
+        "ece": 0.0599270833333333,
+        "recallAt5Fpr": 0.3768472906403941,
+        "recallAt10Fpr": 0.5886699507389163,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 388,
+          "fp": 256,
+          "tn": 298,
+          "fn": 18,
+          "precision": 0.6024844720496895,
+          "recall": 0.9556650246305419,
+          "f1": 0.7390476190476192,
+          "falsePositiveRate": 0.4620938628158845,
+          "accuracy": 0.7145833333333333
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 270,
+          "fp": 72,
+          "tn": 482,
+          "fn": 136,
+          "precision": 0.7894736842105263,
+          "recall": 0.6650246305418719,
+          "f1": 0.7219251336898396,
+          "falsePositiveRate": 0.1299638989169675,
+          "accuracy": 0.7833333333333333
+        }
+      },
+      "self_harm": {
+        "n": 994,
+        "auroc": 0.8619784184679117,
+        "averagePrecision": 0.6479662209476265,
+        "ece": 0.015370925553319923,
+        "recallAt5Fpr": 0.4756756756756757,
+        "recallAt10Fpr": 0.6378378378378379,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 149,
+          "fp": 214,
+          "tn": 595,
+          "fn": 36,
+          "precision": 0.41046831955922863,
+          "recall": 0.8054054054054054,
+          "f1": 0.5437956204379562,
+          "falsePositiveRate": 0.26452410383189123,
+          "accuracy": 0.7484909456740443
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 84,
+          "fp": 33,
+          "tn": 776,
+          "fn": 101,
+          "precision": 0.717948717948718,
+          "recall": 0.4540540540540541,
+          "f1": 0.5562913907284769,
+          "falsePositiveRate": 0.0407911001236094,
+          "accuracy": 0.8651911468812877
+        }
+      },
+      "sexual": {
+        "n": 1054,
+        "auroc": 0.9141610068155,
+        "averagePrecision": 0.9535919865525115,
+        "ece": 0.05792371916508546,
+        "recallAt5Fpr": 0.6705710102489019,
+        "recallAt10Fpr": 0.7510980966325037,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 672,
+          "fp": 256,
+          "tn": 115,
+          "fn": 11,
+          "precision": 0.7241379310344828,
+          "recall": 0.9838945827232797,
+          "f1": 0.8342644320297953,
+          "falsePositiveRate": 0.6900269541778976,
+          "accuracy": 0.7466793168880456
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 617,
+          "fp": 107,
+          "tn": 264,
+          "fn": 66,
+          "precision": 0.8522099447513812,
+          "recall": 0.9033674963396779,
+          "f1": 0.877043354655295,
+          "falsePositiveRate": 0.2884097035040431,
+          "accuracy": 0.8358633776091081
+        }
+      },
+      "shocking": {
+        "n": 1151,
+        "auroc": 0.8761160376959299,
+        "averagePrecision": 0.8843761285018316,
+        "ece": 0.15421442224152912,
+        "recallAt5Fpr": 0.4797979797979798,
+        "recallAt10Fpr": 0.6144781144781145,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 538,
+          "fp": 199,
+          "tn": 358,
+          "fn": 56,
+          "precision": 0.7299864314789688,
+          "recall": 0.9057239057239057,
+          "f1": 0.8084147257700977,
+          "falsePositiveRate": 0.35727109515260325,
+          "accuracy": 0.7784535186794093
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 326,
+          "fp": 41,
+          "tn": 516,
+          "fn": 268,
+          "precision": 0.888283378746594,
+          "recall": 0.5488215488215489,
+          "f1": 0.6784599375650364,
+          "falsePositiveRate": 0.07360861759425494,
+          "accuracy": 0.731537793223284
+        }
+      },
+      "illegal_activity": {
+        "n": 859,
+        "auroc": 0.8753774548140424,
+        "averagePrecision": 0.8861306499148754,
+        "ece": 0.19684190919674038,
+        "recallAt5Fpr": 0.546875,
+        "recallAt10Fpr": 0.6785714285714286,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 385,
+          "fp": 136,
+          "tn": 275,
+          "fn": 63,
+          "precision": 0.7389635316698656,
+          "recall": 0.859375,
+          "f1": 0.7946336429308566,
+          "falsePositiveRate": 0.3309002433090024,
+          "accuracy": 0.7683352735739232
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 250,
+          "fp": 21,
+          "tn": 390,
+          "fn": 198,
+          "precision": 0.922509225092251,
+          "recall": 0.5580357142857143,
+          "f1": 0.6954102920723226,
+          "falsePositiveRate": 0.051094890510948905,
+          "accuracy": 0.7450523864959255
+        }
+      },
+      "deception": {
+        "n": 809,
+        "auroc": 0.7895503073439016,
+        "averagePrecision": 0.6332808801202011,
+        "ece": 0.20556131025957977,
+        "recallAt5Fpr": 0.24555160142348753,
+        "recallAt10Fpr": 0.3701067615658363,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 178,
+          "fp": 118,
+          "tn": 410,
+          "fn": 103,
+          "precision": 0.6013513513513513,
+          "recall": 0.6334519572953736,
+          "f1": 0.6169844020797227,
+          "falsePositiveRate": 0.22348484848484848,
+          "accuracy": 0.7268232385661311
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 32,
+          "fp": 13,
+          "tn": 515,
+          "fn": 249,
+          "precision": 0.7111111111111111,
+          "recall": 0.11387900355871886,
+          "f1": 0.19631901840490798,
+          "falsePositiveRate": 0.02462121212121212,
+          "accuracy": 0.6761433868974042
+        }
+      },
+      "political": {
+        "n": 831,
+        "auroc": 0.8338815004059023,
+        "averagePrecision": 0.8777306292564168,
+        "ece": 0.38818291215403133,
+        "recallAt5Fpr": 0.4702258726899384,
+        "recallAt10Fpr": 0.5544147843942505,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 317,
+          "fp": 60,
+          "tn": 284,
+          "fn": 170,
+          "precision": 0.8408488063660478,
+          "recall": 0.6509240246406571,
+          "f1": 0.7337962962962963,
+          "falsePositiveRate": 0.1744186046511628,
+          "accuracy": 0.7232250300842359
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 89,
+          "fp": 2,
+          "tn": 342,
+          "fn": 398,
+          "precision": 0.978021978021978,
+          "recall": 0.18275154004106775,
+          "f1": 0.3079584775086506,
+          "falsePositiveRate": 0.005813953488372093,
+          "accuracy": 0.5186522262334536
+        }
+      },
+      "public_and_personal_health": {
+        "n": 769,
+        "auroc": 0.8153536683490601,
+        "averagePrecision": 0.6919153021132151,
+        "ece": 0.22893003901170353,
+        "recallAt5Fpr": 0.2974910394265233,
+        "recallAt10Fpr": 0.43010752688172044,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 151,
+          "fp": 67,
+          "tn": 423,
+          "fn": 128,
+          "precision": 0.6926605504587156,
+          "recall": 0.5412186379928315,
+          "f1": 0.6076458752515089,
+          "falsePositiveRate": 0.13673469387755102,
+          "accuracy": 0.7464239271781534
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 37,
+          "fp": 10,
+          "tn": 480,
+          "fn": 242,
+          "precision": 0.7872340425531915,
+          "recall": 0.13261648745519714,
+          "f1": 0.22699386503067484,
+          "falsePositiveRate": 0.02040816326530612,
+          "accuracy": 0.6723016905071522
+        }
+      },
+      "spam": {
+        "n": 796,
+        "auroc": 0.7151470200421941,
+        "averagePrecision": 0.606853778587382,
+        "ece": 0.24445427135678394,
+        "recallAt5Fpr": 0.12341772151898735,
+        "recallAt10Fpr": 0.23417721518987342,
+        "atThreshold": {
+          "threshold": 0.1268,
+          "tp": 196,
+          "fp": 114,
+          "tn": 366,
+          "fn": 120,
+          "precision": 0.632258064516129,
+          "recall": 0.620253164556962,
+          "f1": 0.6261980830670927,
+          "falsePositiveRate": 0.2375,
+          "accuracy": 0.7060301507537688
+        },
+        "verdict": {
+          "threshold": 0.5,
+          "tp": 48,
+          "fp": 31,
+          "tn": 449,
+          "fn": 268,
+          "precision": 0.6075949367088608,
+          "recall": 0.1518987341772152,
+          "f1": 0.2430379746835443,
+          "falsePositiveRate": 0.06458333333333334,
+          "accuracy": 0.6243718592964824
+        }
+      }
+    },
+    "categoryAnswered": 10146,
+    "category": {
+      "accuracy": 0.5314409619554504,
+      "macroF1": 0.5061567212754534,
+      "perClass": {
+        "hate": {
+          "precision": 0.5369496855345912,
+          "recall": 0.6898989898989899,
+          "f1": 0.6038903625110522,
+          "support": 990
+        },
+        "harassment": {
+          "precision": 0.6007905138339921,
+          "recall": 0.16291532690246516,
+          "f1": 0.2563237774030354,
+          "support": 933
+        },
+        "violence": {
+          "precision": 0.45046235138705415,
+          "recall": 0.35520833333333335,
+          "f1": 0.3972044263249855,
+          "support": 960
+        },
+        "self_harm": {
+          "precision": 0.6553784860557769,
+          "recall": 0.33098591549295775,
+          "f1": 0.43983957219251335,
+          "support": 994
+        },
+        "sexual": {
+          "precision": 0.47319688109161795,
+          "recall": 0.9212523719165086,
+          "f1": 0.6252414681262074,
+          "support": 1054
+        },
+        "shocking": {
+          "precision": 0.6329268292682927,
+          "recall": 0.45091225021720244,
+          "f1": 0.5266362252663623,
+          "support": 1151
+        },
+        "illegal_activity": {
+          "precision": 0.47588126159554733,
+          "recall": 0.5972060535506403,
+          "f1": 0.5296850800206505,
+          "support": 859
+        },
+        "deception": {
+          "precision": 0.9857142857142858,
+          "recall": 0.511742892459827,
+          "f1": 0.6737184703010578,
+          "support": 809
+        },
+        "political": {
+          "precision": 0.5550493545937737,
+          "recall": 0.8796630565583634,
+          "f1": 0.680633147113594,
+          "support": 831
+        },
+        "public_and_personal_health": {
+          "precision": 0.46973365617433416,
+          "recall": 0.7568270481144344,
+          "f1": 0.5796812749003984,
+          "support": 769
+        },
+        "spam": {
+          "precision": 0.36009174311926606,
+          "recall": 0.1972361809045226,
+          "f1": 0.25487012987012986,
+          "support": 796
+        }
+      },
+      "confusion": {
+        "hate": {
+          "hate": 683,
+          "harassment": 2,
+          "violence": 10,
+          "self_harm": 6,
+          "sexual": 25,
+          "shocking": 71,
+          "illegal_activity": 17,
+          "deception": 0,
+          "political": 121,
+          "public_and_personal_health": 20,
+          "spam": 35
+        },
+        "harassment": {
+          "hate": 121,
+          "harassment": 152,
+          "violence": 83,
+          "self_harm": 28,
+          "sexual": 251,
+          "shocking": 42,
+          "illegal_activity": 46,
+          "deception": 1,
+          "political": 89,
+          "public_and_personal_health": 71,
+          "spam": 49
+        },
+        "violence": {
+          "hate": 89,
+          "harassment": 44,
+          "violence": 341,
+          "self_harm": 82,
+          "sexual": 99,
+          "shocking": 38,
+          "illegal_activity": 132,
+          "deception": 0,
+          "political": 34,
+          "public_and_personal_health": 71,
+          "spam": 30
+        },
+        "self_harm": {
+          "hate": 26,
+          "harassment": 14,
+          "violence": 108,
+          "self_harm": 329,
+          "sexual": 211,
+          "shocking": 49,
+          "illegal_activity": 58,
+          "deception": 0,
+          "political": 14,
+          "public_and_personal_health": 167,
+          "spam": 18
+        },
+        "sexual": {
+          "hate": 14,
+          "harassment": 2,
+          "violence": 7,
+          "self_harm": 3,
+          "sexual": 971,
+          "shocking": 9,
+          "illegal_activity": 7,
+          "deception": 0,
+          "political": 6,
+          "public_and_personal_health": 17,
+          "spam": 18
+        },
+        "shocking": {
+          "hate": 128,
+          "harassment": 12,
+          "violence": 89,
+          "self_harm": 31,
+          "sexual": 169,
+          "shocking": 519,
+          "illegal_activity": 35,
+          "deception": 0,
+          "political": 36,
+          "public_and_personal_health": 94,
+          "spam": 38
+        },
+        "illegal_activity": {
+          "hate": 51,
+          "harassment": 8,
+          "violence": 58,
+          "self_harm": 6,
+          "sexual": 73,
+          "shocking": 12,
+          "illegal_activity": 513,
+          "deception": 5,
+          "political": 57,
+          "public_and_personal_health": 35,
+          "spam": 41
+        },
+        "deception": {
+          "hate": 48,
+          "harassment": 4,
+          "violence": 40,
+          "self_harm": 9,
+          "sexual": 32,
+          "shocking": 14,
+          "illegal_activity": 8,
+          "deception": 414,
+          "political": 174,
+          "public_and_personal_health": 27,
+          "spam": 39
+        },
+        "political": {
+          "hate": 20,
+          "harassment": 11,
+          "violence": 11,
+          "self_harm": 2,
+          "sexual": 4,
+          "shocking": 13,
+          "illegal_activity": 26,
+          "deception": 0,
+          "political": 731,
+          "public_and_personal_health": 4,
+          "spam": 9
+        },
+        "public_and_personal_health": {
+          "hate": 12,
+          "harassment": 2,
+          "violence": 6,
+          "self_harm": 3,
+          "sexual": 45,
+          "shocking": 21,
+          "illegal_activity": 86,
+          "deception": 0,
+          "political": 10,
+          "public_and_personal_health": 582,
+          "spam": 2
+        },
+        "spam": {
+          "hate": 80,
+          "harassment": 2,
+          "violence": 4,
+          "self_harm": 3,
+          "sexual": 172,
+          "shocking": 32,
+          "illegal_activity": 150,
+          "deception": 0,
+          "political": 45,
+          "public_and_personal_health": 151,
+          "spam": 157
+        }
+      }
+    }
+  },
+  "latencyMs": {
+    "mean": 554.4099166371002,
+    "p50": 471.42780000000494,
+    "p90": 874.1107000000193,
+    "p95": 1009.7481000000262,
+    "p99": 1444.509699999995
+  },
+  "job": {
+    "startedAt": "2026-10-21T18:32:16.936Z",
+    "wallMs": 711183.5853,
+    "images": 10146,
+    "concurrency": 8,
+    "imagesPerSecond": 14.266358517990952,
+    "retried": 0,
+    "complete": true
+  },
+  "cost": {
+    "totalUsd": 0.40344254199998775,
+    "per1kImagesUsd": 0.03976370411984898,
+    "meanInputTokens": 1046.413266311847,
+    "meanOutputTokens": 0
+  }
+}
